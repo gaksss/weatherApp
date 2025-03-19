@@ -1,50 +1,93 @@
 /* Weather */
 .weather.card {
-  margin-top: 4vh;
-  width: 50vh;
-  height: 50vh;
+  margin: 4vh auto;
+  width: 90%;
+  max-width: 500px;
+  min-height: 500px;
   position: relative;
   background: #0b0829;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-self: center;
 }
 
 .weather.card .card-content {
   color: white;
   flex: 1;
   padding: 20px;
-  
+  width: 100%;
+}
+
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.weather img {
+  width: 100px;
+  height: 100px;
+  margin: 1rem 0;
+}
+
+.weather .temperature {
+  font-size: clamp(3rem, 10vw, 120px);
+  font-family: 'Roboto', sans-serif;
+  text-shadow: -1px 0 #61dafb, 0 1px #61dafb, 1px 0 #61dafb, 0 -1px #61dafb;
+  margin: 0.5rem 0;
+}
+
+.wind {
+  font-size: 1.2rem;
+  margin: 1rem 0;
 }
 
 .weather.card .card-action {
   background: #120944;
   color: #ffab40;
   display: flex;
-  gap: 1vh;
+  flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
   padding: 16px;
+  width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-.weather .temperature {
-  margin-left: 4vh;
-  font-size: 120px;
-  font-family: 'Roboto', sans-serif;
-  text-shadow: -1px 0 #61dafb, 0 1px #61dafb, 1px 0 #61dafb, 0 -1px #61dafb;
-}
-
 .card-action a {
   color: #ffab40 !important;
   text-decoration: none;
+  padding: 0.5rem;
 }
 
 .card-action a:hover {
   color: #ffd8a6 !important;
+}
+
+@media (max-width: 600px) {
+  .weather.card {
+    min-height: 400px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .weather img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .wind {
+    font-size: 1rem;
+  }
+
+  .card-action {
+    padding: 12px;
+    gap: 0.5rem;
+  }
 }
 
